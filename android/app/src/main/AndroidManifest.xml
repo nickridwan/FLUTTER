@@ -2,7 +2,11 @@
     package="com.example.untitled">
 
    <application
+<<<<<<< HEAD
         android:label="Movie Apps"
+=======
+        android:label="untitled"
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

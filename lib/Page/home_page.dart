@@ -1,5 +1,9 @@
 import 'dart:convert';
 import 'dart:developer';
+<<<<<<< HEAD
+=======
+import 'dart:ui';
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -13,8 +17,13 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+<<<<<<< HEAD
 TextStyle titleStyle = const TextStyle(
     fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);
+=======
+TextStyle titleStyle =
+    TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white);
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
 
 class _HomePageState extends State<HomePage> {
   List<listMovie> _listMovie = [];
@@ -27,7 +36,11 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<List<listMovie>> _fetchMovies(int page) async {
+<<<<<<< HEAD
     final response = await http.get(Uri.parse(
+=======
+    final response = await http.post(Uri.parse(
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
         'https://api.themoviedb.org/3/movie/popular?api_key=242346b956cd13fbd0d7e3b0b782c6ce&language=en-US&page=1$page'));
     if (response.statusCode == 200) {
       final result = json.decode(response.body);
@@ -43,7 +56,12 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       _listMovie.addAll(myMovies);
     });
+<<<<<<< HEAD
     log("populating ${page.toString()}");
+=======
+
+    print("populating" + page.toString());
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
   }
 
   @override
@@ -51,20 +69,30 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black87,
       appBar: AppBar(
+<<<<<<< HEAD
         toolbarHeight: 100,
         backgroundColor: Colors.black,
         leading: const Icon(Icons.view_headline_sharp),
+=======
+        backgroundColor: Colors.black,
+        leading: Icon(Icons.view_headline_sharp),
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
         title: Text(
           "Movies",
           style: titleStyle,
         ),
+<<<<<<< HEAD
         actions: const [
+=======
+        actions: [
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
           Padding(padding: EdgeInsets.all(10), child: Icon(Icons.search))
         ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+<<<<<<< HEAD
             Stack(
               children: [
                 Image.network(
@@ -98,16 +126,35 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             const SizedBox(
+=======
+            Row(
+              children: [
+                Image.network(
+                    'https://images.alphacoders.com/440/thumb-350-44051.jpg',
+                    width: MediaQuery.of(context).size.width,
+                    height: 200,
+                    fit: BoxFit.cover)
+              ],
+            ),
+            SizedBox(
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
               height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
+<<<<<<< HEAD
                     padding: const EdgeInsets.all(10),
                     child: Text("Popular", style: titleStyle)),
                 Padding(
                   padding: const EdgeInsets.all(10),
+=======
+                    padding: EdgeInsets.all(10),
+                    child: Text("Popular", style: titleStyle)),
+                Padding(
+                  padding: EdgeInsets.all(10),
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
                   child: Text("See all", style: titleStyle),
                 )
               ],
@@ -115,6 +162,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: <Widget>[
                 _listMovie.isEmpty
+<<<<<<< HEAD
                     ? SizedBox(
                         height: 270,
                         width: MediaQuery.of(context).size.width,
@@ -123,16 +171,29 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             radius: 30,
                           ),
+=======
+                    ? Container(
+                        height: 270,
+                        width: MediaQuery.of(context).size.width,
+                        child: const Center(
+                          child: CircularProgressIndicator(),
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
                         ),
                       )
                     : Column(
                         children: [
+<<<<<<< HEAD
                           SizedBox(
                             height: 200,
+=======
+                          Container(
+                            height: 270,
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
                             width: MediaQuery.of(context).size.width,
                             child: ListView.separated(
                               itemCount: _listMovie.length,
                               scrollDirection: Axis.horizontal,
+<<<<<<< HEAD
                               itemBuilder: (ctx, i) => Container(
                                 width: MediaQuery.of(context).size.width / 2.5,
                                 child: MovieItems(
@@ -143,11 +204,21 @@ class _HomePageState extends State<HomePage> {
                               ),
                               separatorBuilder: (ctx, i) {
                                 return const SizedBox(
+=======
+                              itemBuilder: (ctx, i) => MovieItems(
+                                _listMovie[i].id,
+                                _listMovie[i].image,
+                                _listMovie[i].title,
+                              ),
+                              separatorBuilder: (ctx, i) {
+                                return SizedBox(
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
                                   width: 10,
                                 );
                               },
                             ),
                           ),
+<<<<<<< HEAD
                           const SizedBox(
                             height: 20,
                           ),
@@ -177,11 +248,19 @@ class _HomePageState extends State<HomePage> {
                           ),
                           SizedBox(
                             height: 200,
+=======
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Container(
+                            height: 270,
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
                             width: MediaQuery.of(context).size.width,
                             child: ListView.separated(
                               itemCount: _listMovie.length,
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
+<<<<<<< HEAD
                                 return Container(
                                   width:
                                       MediaQuery.of(context).size.width / 2.5,
@@ -194,6 +273,39 @@ class _HomePageState extends State<HomePage> {
                               },
                               separatorBuilder: (context, index) {
                                 return const SizedBox(
+=======
+                                return MovieItems(
+                                  _listMovie[index].id,
+                                  _listMovie[index].image,
+                                  _listMovie[index].title,
+                                );
+                              },
+                              separatorBuilder: (context, index) {
+                                return SizedBox(
+                                  width: 10,
+                                );
+                              },
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Container(
+                            height: 270,
+                            width: MediaQuery.of(context).size.width,
+                            child: ListView.separated(
+                              itemCount: _listMovie.length,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return MovieItems(
+                                  _listMovie[index].id,
+                                  _listMovie[index].image,
+                                  _listMovie[index].title,
+                                );
+                              },
+                              separatorBuilder: (context, index) {
+                                return SizedBox(
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
                                   width: 10,
                                 );
                               },

@@ -3,7 +3,11 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
+<<<<<<< HEAD
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
+=======
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -31,6 +35,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -51,11 +59,19 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
   assets:
     - assets/images/view.jpg
     - assets/images/logo.png
@@ -89,3 +105,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 32ee78af82b7670d5d2a7475f6319dafc9b8f3c0
