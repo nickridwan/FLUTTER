@@ -1,6 +1,6 @@
 # untitled
 
-A new Flutter project.
+this flutter project slicing ui and fetch response api from movie-db(api)
 
 ## Getting Started
 
